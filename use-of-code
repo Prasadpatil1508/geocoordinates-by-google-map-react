@@ -1,0 +1,13 @@
+                      <FarmLocationMap
+                        onLocationSelect={handleLocationSelect}
+                        initialCenter={
+                          formData.latitude && formData.longitude
+                            ? {
+                              lat: parseFloat(formData.latitude),
+                              lng: parseFloat(formData.longitude),
+                            }
+                            : undefined
+                        }
+                        initialPolygon={formData.polygonCoordinates}
+                        onDialogClose={clearLocationData}
+                      />
